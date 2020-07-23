@@ -7,6 +7,10 @@ public class FizzBuzzWhizz {
             result = "FizzBuzz";
             return result;
         }
+        if (number % 3 == 0 && number % 7 == 0) {
+            result = "FizzWhizz";
+            return result;
+        }
         if (number % 3 == 0)
             result = "Fizz";
         if (number % 5 == 0)
