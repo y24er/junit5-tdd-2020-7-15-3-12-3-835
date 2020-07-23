@@ -21,33 +21,48 @@ class HelloWorldTest {
     }
 
 
+//    @Test
+//    @DisplayName("try display name")
+//    void hello_world_test() {
+//        //given
+//        Dependency dependency = new Dependency();
+//        HelloWorld helloWorld = new HelloWorld(dependency);
+//
+//        //when
+//        String actual = helloWorld.beenCalled(number);
+//
+//        //then
+//        assertThat(actual, is("Leave me alone."));
+//
+//    }
+//
+//    @Test
+//    void should_be_mocked() {
+//        //given
+//        Dependency dependency = mock(Dependency.class);
+//        when(dependency.say()).thenReturn("Hello World");
+//        HelloWorld helloWorld = new HelloWorld(dependency);
+//
+//        //when
+//        String actual = helloWorld.beenCalled(number);
+//
+//        //then
+//        assertThat(actual, is("Hello World"));
+//    }
+
+
     @Test
-    @DisplayName("try display name")
-    void hello_world_test() {
+    void should_return_fizz_when_play_beenCalled_given3() {
         //given
+        int number = 3;
+        String actual;
         Dependency dependency = new Dependency();
         HelloWorld helloWorld = new HelloWorld(dependency);
 
         //when
-        String actual = helloWorld.beenCalled();
+        actual = helloWorld.beenCalled(number);
 
         //then
-        assertThat(actual, is("Leave me alone."));
-
+        assertThat(actual, is("Fizz"));
     }
-
-    @Test
-    void should_be_mocked() {
-        //given
-        Dependency dependency = mock(Dependency.class);
-        when(dependency.say()).thenReturn("Hello World");
-        HelloWorld helloWorld = new HelloWorld(dependency);
-
-        //when
-        String actual = helloWorld.beenCalled();
-
-        //then
-        assertThat(actual, is("Hello World"));
-    }
-
 }
