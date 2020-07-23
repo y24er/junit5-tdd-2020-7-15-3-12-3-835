@@ -7,7 +7,11 @@ public class HelloWorld {
 
         this.dependency = dependency;
     }
-    public String beenCalled() {
-        return dependency.say();
+
+    public String beenCalled(int number) {
+        String result = "";
+        if (number % 3 == 0)
+            result += "Fizz";
+        return result;
     }
 }
