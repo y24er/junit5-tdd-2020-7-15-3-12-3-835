@@ -2,12 +2,16 @@ package junit5.tdd;
 
 public class FizzBuzzWhizz {
     public String say(int number) {
+        String result = null;
         if (number % 3 == 0)
-            return "Fizz";
+            result = "Fizz";
         if (number % 5 == 0)
-            return "Buzz";
+            result = "Buzz";
         if (number % 7 == 0)
-            return "Whizz";
-        return String.valueOf(number);
+            result = "Whizz";
+        if (result == null)
+            return String.valueOf(number);
+        return result;
+
     }
 }
