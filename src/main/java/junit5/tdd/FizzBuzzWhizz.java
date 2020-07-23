@@ -3,6 +3,10 @@ package junit5.tdd;
 public class FizzBuzzWhizz {
     public String say(int number) {
         String result = null;
+        if (number % 3 == 0 && number % 5 == 0 && number % 7 == 0) {
+            result = "FizzBuzzWhizz";
+            return result;
+        }
         if (number % 3 == 0 && number % 5 == 0) {
             result = "FizzBuzz";
             return result;
