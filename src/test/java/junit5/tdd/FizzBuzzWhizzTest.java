@@ -18,4 +18,16 @@ public class FizzBuzzWhizzTest {
         assertEquals("1", actual);
     }
 
+    @Test
+    public void should_return_fizz_when_say_given_3() {
+        //given
+        int number = 3;
+
+        //when
+        FizzBuzzWhizz fizzBuzzWhizz = new FizzBuzzWhizz();
+        String actual = fizzBuzzWhizz.say(number);
+
+        //then
+        assertEquals("Fizz", actual);
+    }
 }
