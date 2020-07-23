@@ -56,4 +56,17 @@ public class FizzBuzzWhizzTest {
         //then
         assertEquals("Whizz", actual);
     }
+
+    @Test
+    public void should_return_fizzbuzz_when_say_given_15() {
+        //given
+        int number = 15;
+
+        //when
+        FizzBuzzWhizz fizzBuzzWhizz = new FizzBuzzWhizz();
+        String actual = fizzBuzzWhizz.say(number);
+
+        //then
+        assertEquals("FizzBuzz", actual);
+    }
 }
